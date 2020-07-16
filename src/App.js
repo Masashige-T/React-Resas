@@ -1,16 +1,29 @@
-import React from 'react';
+import React from "react"
 
-function App() {
+import { GlobalStyle } from "./style/GlobalStyle"
+import Checkbox from "./components/Checkbox"
+
+const prefectures = [
+  {
+    id: "tokyo",
+    name: "東京",
+  },
+  {
+    id: "osaka",
+    name: "大阪",
+  },
+]
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-          Learn React
-      </header>
-    </div>
-  );
+    <>
+      <GlobalStyle />
+      <h1>Hello Resas</h1>
+      {prefectures.map(prefecture => (
+        <Checkbox id={prefecture.id} text={prefecture.name} />
+      ))}
+    </>
+  )
 }
 
-export default App;
+export default App
