@@ -1,28 +1,21 @@
 import React from "react"
+import { Provider } from 'react-redux';
+import { store } from './stores';
+import styled from 'styled-components';
 
 import { GlobalStyle } from "./style/GlobalStyle"
-import Checkbox from "./components/Checkbox"
-
-const prefectures = [
-  {
-    id: "tokyo",
-    name: "東京",
-  },
-  {
-    id: "osaka",
-    name: "大阪",
-  },
-]
+import Header from "./components/Header"
+import SelectArea from "./components/SelectArea"
+import Chart from "./components/Chart"
 
 const App = () => {
   return (
-    <>
+    <Provider store={store}>
       <GlobalStyle />
-      <h1>Hello Resas</h1>
-      {prefectures.map(prefecture => (
-        <Checkbox id={prefecture.id} text={prefecture.name} />
-      ))}
-    </>
+      <Header />
+      <SelectArea />
+      <Chart />
+    </Provider>
   )
 }
 
