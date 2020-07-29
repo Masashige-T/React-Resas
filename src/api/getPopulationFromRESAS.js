@@ -3,6 +3,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit"
 const endPoint =
   "https://opendata.resas-portal.go.jp/api/v1/population/composition/perYear?prefCode="
 
+// 引数に渡された都道府県から人口構成を取得
 export const getPopulationFromRESAS = createAsyncThunk(
   "population/getPopulation",
   async ([prefCode, prefName]) => {

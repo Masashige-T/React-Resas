@@ -10,11 +10,12 @@ const Container = () => {
   const dispatch = useDispatch()
   const { prefectures } = useSelector(state => state.prefecture)
 
-  // classでのcomponentDisMountに相当 dispatchが行われた際に発火
+  // classでのcomponentDisMountに相当
   useEffect(() => {
     dispatch(getPrefectureFromRESAS())
   }, [dispatch])
 
+  // checkboxにチェックが入っていなければapiコール, 入っていれば選択された都道府県をstateから削除
   const handleOnChange = (prefCode, prefName) => {
     if (document.getElementById(prefCode).checked) {
       dispatch(getPopulationFromRESAS([prefCode, prefName]))

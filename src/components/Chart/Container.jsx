@@ -10,6 +10,7 @@ const generatingRandomColor = () => {
   return color
 }
 
+// グラフに使用する47色の配列
 const colors = [...Array(47).keys()].map(i => generatingRandomColor())
 
 const Container = () => {
