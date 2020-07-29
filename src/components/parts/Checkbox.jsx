@@ -5,7 +5,7 @@ const Checkbox = props => {
   const { id, prefecture_name, onChange } = props
   return (
     <Wrapper>
-      <Radio id={id} name="prefectures" type="radio" onChange={onChange}/>
+      <Radio id={id} name="prefectures" type="checkbox" onChange={onChange} />
       <Label htmlFor={id}>{prefecture_name}</Label>
     </Wrapper>
   )
@@ -48,9 +48,9 @@ const Radio = styled.input`
       top: 0;
       left: -3.2rem;
       width: 1.6rem;
-      height: .8rem;
-      border-left: 2px solid #4ED0E1;
-      border-bottom: 2px solid #4ED0E1;
+      height: 0.8rem;
+      border-left: 2px solid #4ed0e1;
+      border-bottom: 2px solid #4ed0e1;
       transform: rotate(-45deg);
     }
   }

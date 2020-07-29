@@ -1,5 +1,5 @@
 import React from "react"
-import styled from 'styled-components';
+import styled from "styled-components"
 
 const Header = () => {
   return (
@@ -19,7 +19,7 @@ const Wrapper = styled.header`
 `
 
 const Title = styled.h1`
-  color: #4ED0E1;
+  color: #4ed0e1;
   font-size: 3.2rem;
 `
 
