@@ -6,8 +6,8 @@
 
 ## 起動方法
 
-リポジトリをクローン後
-npm の場合`npm install` or `npm i`
+リポジトリをクローン後  
+npm の場合`npm install` or `npm i`  
 yarn の場合 `yarn`
 
 必要パッケージをインストール後[RESAS-API](https://opendata.resas-portal.go.jp/)に登録し APIKEY を発行
