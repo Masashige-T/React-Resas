@@ -31,7 +31,7 @@ const Presentational = ({ data, prefectures, colors }) => {
               name={pref}
               type="monotone"
               dataKey={pref}
-              stroke={[colors[index]]}
+              stroke={colors[index]}
               key={index}
             />
           ))}
